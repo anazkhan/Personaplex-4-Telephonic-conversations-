@@ -50,6 +50,13 @@ from .models import loaders, MimiModel, LMModel, LMGen
 from .utils.connection import create_ssl_context, get_lan_ip
 from .utils.logging import setup_logger, ColorizedLog
 
+import os
+import sys
+
+
+from dotenv import load_dotenv  
+load_dotenv()
+
 
 logger = setup_logger(__name__)
 DeviceString = Literal["cuda"] | Literal["cpu"] #| Literal["mps"]
